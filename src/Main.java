@@ -54,7 +54,6 @@ public class Main {
         for (int i = 1; i < amountYearsSaving; i++) {
             for (int j = 1; j <= 12; j++) {
                 currentMoneyInBank += currentMoneyInBank * bankSavingPercent / 100;
-                needMonthsForVasiliy++;
                 if (j % 6 == 0) {
                     System.out.println("Год: " + i + " , Месяц: " + j + "  Сумма " + (int) currentMoneyInBank);
                 }
@@ -87,7 +86,29 @@ public class Main {
         System.out.println("\nPart 8");
         int firsTableNumber = 2;
         for (int i = 1; i <= 10; i++) {
-            System.out.println(firsTableNumber + "*" + i + "=" + firsTableNumber*i);
+            System.out.println(firsTableNumber + "*" + i + "=" + firsTableNumber * i);
+        }
+
+        System.out.println("\nAddon Task 4 Ping-Pong\n");
+        for (int i = 1; i <= 30; i++) {
+            System.out.print("\n" + i + ":");
+            if (i % 3 == 0) {
+                System.out.print(" Ping");
+            }
+            if (i % 5 == 0) {
+                System.out.print(" Pong");
+            }
+        }
+
+        System.out.println("\n\nAddon Task 5 Fibonachi\n");
+        int fibonachiLeftNumber = 0;
+        int fibonachiRightNumber = 1;
+        int temporaryNumberFibonachi = 1;
+        for (int i = 0; i < 20; i++) {
+            System.out.print(fibonachiLeftNumber + " ");
+            temporaryNumberFibonachi = fibonachiLeftNumber + fibonachiRightNumber;
+            fibonachiLeftNumber = fibonachiRightNumber;
+            fibonachiRightNumber = temporaryNumberFibonachi;
         }
     }
 }
